@@ -4,8 +4,8 @@ export const GlobalStyle = createGlobalStyle`
   :root {
     --gray: #CDCDCD;
     --black: #2C2C2C;
-    --white: #FFFFFF;
-    --shadow: rgba(0,0,0,0.2);
+    --white: #FFFFFF;    
+    --shadow: rgba(0,0,0,0.15);
     --transition: all 0.2s cubic-bezier(.43,.41,.22,.91)
   }
 
@@ -49,10 +49,10 @@ export const Wrapper = styled.section`
 export const Container = styled.div`
   width: 100%;
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 150px 0;
   max-width: 1280px;
 
   @media screen and (max-width: 960px) {
-    padding: 0 30px;
+    padding: 30px;
   }
 `;
