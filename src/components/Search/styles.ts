@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const SearchInput = styled.div`
+  margin-bottom: 80px;
+
   &.withIcon {
     position: relative;
   }
@@ -8,11 +10,11 @@ export const SearchInput = styled.div`
   .searchIcon {
     top: 50%;
     left: 36px;
+    width: 36px;
+    height: 36px;
+    fill: var(--gray);
     position: absolute;
     transform: translateY(-50%);
-    fill: var(--gray);
-    height: 36px;
-    width: 36px;
   }
 `;
 
