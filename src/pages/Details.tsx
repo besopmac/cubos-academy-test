@@ -1,3 +1,11 @@
+import { Header } from '../components/Header';
+import { Wrapper, Container } from '../globalStyles';
+
 export function Details() {
-  return <h1>Detalhe do Filme</h1>;
+  return (
+    <Wrapper>
+      <Header />
+      <Container>Detalhes</Container>
+    </Wrapper>
+  );
 }
