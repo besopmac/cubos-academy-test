@@ -1,3 +1,11 @@
+import { Header } from '../components/Header';
+import { Wrapper, Container } from '../globalStyles';
+
 export function List() {
-  return <h1>Lista de Filmes</h1>;
+  return (
+    <Wrapper>
+      <Header />
+      <Container>Main</Container>
+    </Wrapper>
+  );
 }
