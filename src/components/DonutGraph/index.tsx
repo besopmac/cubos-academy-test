@@ -1,3 +1,5 @@
+import { RiDonutChartFill } from 'react-icons/ri';
+
 export const DonutGraph = () => {
-  return <h2>DonutGraph</h2>;
+  return <RiDonutChartFill />;
 };

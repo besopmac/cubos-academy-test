@@ -10,6 +10,7 @@ export function List() {
       <Container>
         <Search />
         <MovieCard />
+        <MovieCard />
       </Container>
     </Wrapper>
   );
