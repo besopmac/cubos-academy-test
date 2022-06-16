@@ -56,3 +56,5 @@ export const Container = styled.div`
     padding: 30px;
   }
 `;
+
+export const Grid = styled.main``;
