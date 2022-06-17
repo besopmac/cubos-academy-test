@@ -13,7 +13,7 @@ export const Info = () => {
   return (
     <Box>
       <Title>
-        <h2>Homem Aranha - Sem volta para casa</h2>
+        <h2>Homem Aranha</h2>
         <DonutGraph />
       </Title>
       <Sinopsys>
