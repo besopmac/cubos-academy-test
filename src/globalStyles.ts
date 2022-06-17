@@ -57,4 +57,11 @@ export const Container = styled.div`
   }
 `;
 
-export const Grid = styled.main``;
+export const Grid = styled.main`
+  gap: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 35%;
+  grid-template-areas:
+    'info info flyer'
+    'video video video';
+`;
