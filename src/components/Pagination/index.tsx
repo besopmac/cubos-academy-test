@@ -1,13 +1,15 @@
-import { List, Item } from './styles';
+import styles from './../Pagination/Pagination.module.scss';
 
 export const Pagination = () => {
   return (
-    <List>
-      <Item className="active">1</Item>
-      <Item>2</Item>
-      <Item>3</Item>
-      <Item>4</Item>
-      <Item>5</Item>
-    </List>
+    <div className={styles.pagination}>
+      <ul className={styles.list}>
+        <li className={styles.active}>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+      </ul>
+    </div>
   );
 };

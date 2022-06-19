@@ -1,10 +1,10 @@
-import { Box } from './styles';
-import cartaz from './../../assets/images/miranha.jpg';
+import cartaz from './../../assets/images/cartaz.jpg';
+import styles from './../Flyer/Flyer.module.scss';
 
 export const Flyer = () => {
   return (
-    <Box>
+    <div className={styles.flyer}>
       <img src={cartaz} alt="" />
-    </Box>
+    </div>
   );
 };

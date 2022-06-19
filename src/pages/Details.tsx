@@ -1,20 +1,21 @@
 import { Info } from '../components/Info';
+import { Flyer } from '../components/Flyer';
 import { Video } from '../components/Video';
 import { Header } from '../components/Header';
-import { Wrapper, Container, Grid } from '../globalStyles';
-import { Flyer } from '../components/Flyer';
+
+import styles from './../assets/scss/Details.module.scss';
 
 export function Details() {
   return (
-    <Wrapper>
+    <section className={styles.wrapper}>
       <Header />
-      <Container>
-        <Grid>
+      <main className={styles.container}>
+        <div className={styles.grid}>
           <Info />
           <Flyer />
           <Video />
-        </Grid>
-      </Container>
-    </Wrapper>
+        </div>
+      </main>
+    </section>
   );
 }

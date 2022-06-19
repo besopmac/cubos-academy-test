@@ -1,22 +1,15 @@
-import {
-  Box,
-  Item,
-  Grid,
-  Title,
-  Badges,
-  Sinopsys,
-  Information,
-} from './styles';
-import { DonutGraph } from '../DonutGraph';
+import { PopularityGraph } from '../PopularityGraph';
+import styles from './../Info/Info.module.scss';
 
 export const Info = () => {
   return (
-    <Box>
-      <Title>
-        <h2>Homem Aranha</h2>
-        <DonutGraph />
-      </Title>
-      <Sinopsys>
+    <article className={styles.info}>
+      <header className={styles.header}>
+        <h2>Titulo do Filme</h2>
+        <PopularityGraph />
+      </header>
+
+      <main className={styles.sinopsys}>
         <h3>Sinopse</h3>
         <p>
           Thor está aprisionado do outro lado do universo, sem seu martelo, e se
@@ -26,10 +19,11 @@ export const Info = () => {
           precisa sobreviver a uma batalha de gladiadores que o coloca contra
           seu ex-aliado e vingador, o Incrível Hulk.
         </p>
-      </Sinopsys>
-      <Information>
+      </main>
+
+      <div className={styles.information}>
         <h3>Informações</h3>
-        <Grid>
+        <div className={styles.grid}>
           <p>
             <small>Situação</small>Lançado
           </p>
@@ -48,13 +42,14 @@ export const Info = () => {
           <p>
             <small>Lucro</small>$ 180.000.000,00
           </p>
-        </Grid>
-      </Information>
-      <Badges>
-        <Item>Ação</Item>
-        <Item>Aventura</Item>
-        <Item>Fantasia</Item>
-      </Badges>
-    </Box>
+        </div>
+      </div>
+
+      <ul className={styles.badges}>
+        <li>Ação</li>
+        <li>Aventura</li>
+        <li>Fantasia</li>
+      </ul>
+    </article>
   );
 };
