@@ -5,12 +5,9 @@ type Movie = {
   id: string;
   title: string;
   overview: string;
-  popularity: number;
   poster_path: string;
-};
-
-type GetMovies = {
-  data: Movie[];
+  release_date: string;
+  vote_average: number;
 };
 
 export async function getMovies(): Promise<Movie[]> {
@@ -21,13 +18,16 @@ export async function getMovies(): Promise<Movie[]> {
     },
   });
 
-  const movies = data.results.map((movie: any) => {
+  console.log('Movies =>', data);
+
+  const movies = data.results.map((movie: Movie) => {
     return {
       id: movie.id,
       title: movie.title,
       overview: movie.overview,
-      popularity: movie.popularity,
       poster_path: movie.poster_path,
+      release_date: movie.release_date,
+      vote_average: movie.vote_average,
     };
   });
 

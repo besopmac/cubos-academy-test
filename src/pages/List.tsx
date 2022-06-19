@@ -23,15 +23,11 @@ export function List() {
           <>
             {!isLoading && isFetching && <p>atualizando</p>}
 
-            {data.map((item) => (
+            {data?.map((item) => (
               <MovieCard key={item.id} {...item} />
             ))}
 
-            <Pagination
-              currentPage={1}
-              onPageChange={() => {}}
-              totalCountofRegisters={200}
-            />
+            <Pagination />
           </>
         )}
       </main>

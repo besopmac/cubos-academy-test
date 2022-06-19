@@ -1,6 +1,13 @@
 import styles from './../PopularityGraph/PopularityGraph.module.scss';
-import { RiDonutChartFill } from 'react-icons/ri';
 
-export const PopularityGraph = () => {
-  return <RiDonutChartFill />;
+type PopularityProps = {
+  voteAverage: number;
+};
+
+export const PopularityGraph = ({ voteAverage }: PopularityProps) => {
+  return (
+    <>
+      <small>{voteAverage}</small>
+    </>
+  );
 };
