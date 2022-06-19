@@ -1,6 +1,4 @@
-import styled from 'styled-components';
-
-export const Box = styled.div`
+.info {
   padding: 50px;
   display: flex;
   grid-area: info;
@@ -15,27 +13,27 @@ export const Box = styled.div`
     rgba(44, 44, 44, 1) 10%,
     rgba(205, 205, 205, 1) 200%
   );
-`;
+}
 
-export const Title = styled.div`
+.header {
   gap: 20px;
   display: grid;
   font-size: 1.4rem;
   align-items: center;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr auto;    
+
+  > h2 {
+    line-height: 1.1;
+    font-size: 2.45rem;
+  }
 
   > svg {
     width: 90px;
     height: 90px;
   }
+}
 
-  h2 {
-    line-height: 1.1;
-    font-size: 2.45rem;
-  }
-`;
-
-export const Sinopsys = styled.div`
+.sinopsys {
   h3 {
     font-weight: 400;
     font-size: 1.5rem;
@@ -64,9 +62,9 @@ export const Sinopsys = styled.div`
     font-weight: normal;
     padding: 20px 0 20px 20px;
   }
-`;
+}
 
-export const Information = styled.div`
+.information {
   h3 {
     font-weight: 400;
     font-size: 1.5rem;
@@ -88,9 +86,9 @@ export const Information = styled.div`
       );
     }
   }
-`;
+}
 
-export const Grid = styled.div`
+.grid {
   gap: 20px;
   display: grid;
   margin-top: 20px;
@@ -111,23 +109,23 @@ export const Grid = styled.div`
       letter-spacing: normal;
     }
   }
-`;
+}
 
-export const Badges = styled.ul`
+.badges {
   display: flex;
   list-style: none;
   margin-top: 20px;
-`;
 
-export const Item = styled.li`
-  padding: 0 25px;
-  line-height: 2.5;
-  font-size: 0.9rem;
-  color: var(--black);
-  border-radius: 30px;
-  background-color: var(--white);
-
-  + li {
-    margin-left: 15px;
+  li {
+    padding: 0 25px;
+    line-height: 2.5;
+    font-size: 0.9rem;
+    color: var(--black);
+    border-radius: 30px;
+    background-color: var(--white);
+    
+    + li {
+      margin-left: 15px;
+    }
   }
-`;
+}

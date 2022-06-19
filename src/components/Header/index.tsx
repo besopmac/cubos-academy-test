@@ -1,12 +1,13 @@
+import logo from './../../assets/images/logo.png';
+import styles from './Header.module.scss';
 import { Link } from 'react-router-dom';
-import { HeaderSection, HeaderLogo } from './styles';
 
 export const Header = () => {
   return (
-    <HeaderSection>
+    <header className={styles.header}>
       <Link to="/">
-        <HeaderLogo />
+        <img src={logo} className={styles.logo} alt="Melhores Filmes" />
       </Link>
-    </HeaderSection>
+    </header>
   );
 };

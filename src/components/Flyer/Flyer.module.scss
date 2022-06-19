@@ -1,6 +1,5 @@
-import styled from 'styled-components';
-
-export const Box = styled.div`
+.flyer {
+  overflow: hidden;
   grid-area: flyer;
   border-radius: 15px;
 
@@ -9,6 +8,5 @@ export const Box = styled.div`
     height: 100%;
     max-height: 100%;
     object-fit: cover;
-    border-radius: 15px;
   }
-`;
+}

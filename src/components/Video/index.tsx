@@ -1,5 +1,5 @@
-import { Box } from './styles';
+import styles from './../Video/Video.module.scss';
 
 export const Video = () => {
-  return <Box></Box>;
+  return <div className={styles.video}></div>;
 };

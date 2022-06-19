@@ -1,24 +1,21 @@
-import { Card, Image, Info, Title, Badges } from './styles';
-import { DonutGraph } from '../DonutGraph';
 import { Badge } from '../Badge';
+import { PopularityGraph } from '../PopularityGraph';
 
-import cartaz from './../../assets/images/miranha.jpg';
+import styles from './../MovieCard/MovieCard.module.scss';
+import cartaz from './../../assets/images/cartaz.jpg';
 
-type CardProps = {
-  image?: string;
-};
-
-export const MovieCard = ({ image }: CardProps) => {
+export const MovieCard = () => {
   return (
-    <Card>
-      <Image>
+    <div className={styles.card}>
+      <div className={styles.flyer}>
         <img src={cartaz} alt="" />
-      </Image>
-      <Info>
-        <Title>
-          <DonutGraph />
+      </div>
+
+      <div className={styles.info}>
+        <div className={styles.title}>
+          <PopularityGraph />
           <h2>Título do Filme</h2>
-        </Title>
+        </div>
         <p>
           Thor está aprisionado do outro lado do universo, sem seu martelo, e se
           vê em uma corrida para voltar até Asgard e impedir o Ragnarok, a
@@ -31,12 +28,12 @@ export const MovieCard = ({ image }: CardProps) => {
           <b>Lançamento:</b> 25/10/2017
         </p>
 
-        <Badges>
+        <ul className={styles.badges}>
           <Badge />
           <Badge />
           <Badge />
-        </Badges>
-      </Info>
-    </Card>
+        </ul>
+      </div>
+    </div>
   );
 };
