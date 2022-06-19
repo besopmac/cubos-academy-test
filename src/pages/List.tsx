@@ -24,7 +24,7 @@ export function List() {
             {!isLoading && isFetching && <p>atualizando</p>}
 
             {data.map((item) => (
-              <MovieCard key={item.id} />
+              <MovieCard key={item.id} {...item} />
             ))}
 
             <Pagination

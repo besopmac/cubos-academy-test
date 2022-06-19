@@ -9,10 +9,20 @@ type Movie = {
   poster_path: string;
 };
 
-export async function getMovies(): Promise<Movie[]> {
-  const { data } = await api.get('movies');
+type GetMovies = {
+  data: Movie[];
+};
 
-  const movies = data.movies.map((movie: any) => {
+export async function getMovies(): Promise<Movie[]> {
+  // const { data } = await api.get('movies');
+  const { data } = await api.get(`/discover/movie`, {
+    params: {
+      api_key: import.meta.env.VITE_TMDB_API_KEY,
+      language: 'pt-BR',
+    },
+  });
+
+  const movies = data.results.map((movie: any) => {
     return {
       id: movie.id,
       title: movie.title,

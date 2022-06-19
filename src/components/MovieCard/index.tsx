@@ -4,26 +4,39 @@ import { PopularityGraph } from '../PopularityGraph';
 import styles from './../MovieCard/MovieCard.module.scss';
 import cartaz from './../../assets/images/cartaz.jpg';
 
-export const MovieCard = () => {
+type Movie = {
+  id: string;
+  title: string;
+  overview: string;
+  popularity: number;
+  poster_path: string;
+};
+
+export const MovieCard = ({
+  id,
+  title,
+  overview,
+  popularity,
+  poster_path,
+}: Movie) => {
+  const IMAGE_PATH = 'https://image.tmdb.org/t/p/w500';
+
   return (
     <div className={styles.card}>
       <div className={styles.flyer}>
-        <img src={cartaz} alt="" />
+        <img
+          src={poster_path ? `${IMAGE_PATH}${poster_path}` : cartaz}
+          alt={title}
+        />
       </div>
 
       <div className={styles.info}>
         <div className={styles.title}>
+          {/* <span>{Math.floor(popularity) / 100}</span> */}
           <PopularityGraph />
-          <h2>Título do Filme</h2>
+          <h2>{title}</h2>
         </div>
-        <p>
-          Thor está aprisionado do outro lado do universo, sem seu martelo, e se
-          vê em uma corrida para voltar até Asgard e impedir o Ragnarok, a
-          destruição de seu lar e o fim da civilização asgardiana que está nas
-          mãos de uma nova e poderosa ameaçam a terrível Hela. Mas primeiro ele
-          precisa sobreviver a uma batalha de gladiadores que o coloca contra
-          seu ex-aliado e vingador, o Incrível Hulk.
-        </p>
+        <p>{overview}</p>
         <p>
           <b>Lançamento:</b> 25/10/2017
         </p>
