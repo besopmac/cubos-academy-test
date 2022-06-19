@@ -1,20 +1,10 @@
 .header {
   display: flex;
-  align-items: center;
+  padding: 1rem 0;
   justify-content: center;
   background-color: var(--black);
-  // max-height: calc(150px - 50px);
 }
 
 .logo {
+  height: 3.5rem;
 }
-
-// export const HeaderLogo = styled.div`
-//   width: 412px;
-//   height: 60px;
-//   margin: 30px auto;
-//   display: inline-block;
-//   background-image: url(${logo});
-//   background-repeat: no-repeat;
-//   background-size: cover;
-// `;
