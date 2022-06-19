@@ -32,7 +32,6 @@ export const MovieCard = ({
 
       <div className={styles.info}>
         <div className={styles.title}>
-          {/* <span>{Math.floor(popularity) / 100}</span> */}
           <PopularityGraph />
           <h2>{title}</h2>
         </div>

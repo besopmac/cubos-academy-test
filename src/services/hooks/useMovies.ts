@@ -14,7 +14,6 @@ type GetMovies = {
 };
 
 export async function getMovies(): Promise<Movie[]> {
-  // const { data } = await api.get('movies');
   const { data } = await api.get(`/discover/movie`, {
     params: {
       api_key: import.meta.env.VITE_TMDB_API_KEY,

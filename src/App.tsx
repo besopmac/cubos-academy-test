@@ -5,10 +5,6 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 
 import './assets/scss/global.scss';
 
-// if (process.env.NODE_ENV === 'development') {
-//   makeServer();
-// }
-
 const queryClient = new QueryClient();
 
 function App() {
