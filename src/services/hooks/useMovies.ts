@@ -18,8 +18,6 @@ export async function getMovies(): Promise<Movie[]> {
     },
   });
 
-  console.log('Movies =>', data);
-
   const movies = data.results.map((movie: Movie) => {
     return {
       id: movie.id,
@@ -36,6 +34,6 @@ export async function getMovies(): Promise<Movie[]> {
 
 export function useMovies() {
   return useQuery('movies', getMovies, {
-    staleTime: 1000 * 10, // 10 seconds
+    staleTime: 10000, // 10 seconds
   });
 }

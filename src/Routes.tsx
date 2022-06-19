@@ -8,8 +8,8 @@ export function AppRoutes() {
     <Router>
       <Routes>
         <Route path="/" element={<List />} />
-        <Route path="/details" element={<Details />} />
-        <Route path="/demo" element={<Demo />} />
+        <Route path="/details/:id" element={<Details />} />
+        <Route path="/demo/:id" element={<Demo />} />
       </Routes>
     </Router>
   );
