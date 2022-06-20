@@ -1,6 +1,6 @@
 # Desafio Técnico Front-end Cubos Academy
 
-O projeto foi desenvolvido com React, TypeScript, Styled Components e Axios.
+O projeto foi desenvolvido com React, TypeScript, CSS Modules, Axios e React Query.
 Por motivos de performance no desenvolvimento, optei por utilizar o Vite (https://vitejs.dev/) como ferramente de tooling.
 
 ## Passa a passo para rodar o projeto:

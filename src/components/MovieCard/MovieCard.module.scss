@@ -2,6 +2,7 @@
   width: 100%;
   display: grid;
   border-radius: 15px;
+  text-decoration: none;
   transition: all 0.3s ease-in;
   grid-template-columns: 22.5% 1fr;
   box-shadow: 0 2px 25px -5px var(--shadow);
@@ -12,7 +13,7 @@
     box-shadow: 0 2px 25px 0 var(--shadow);
   }
 
-  + div {
+  + a {
     margin-top: 60px;
   }
 }

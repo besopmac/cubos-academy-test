@@ -1,17 +1,9 @@
 import { Badge } from '../Badge';
 import { PopularityGraph } from '../PopularityGraph';
-
 import styles from './../MovieCard/MovieCard.module.scss';
 import cartaz from './../../assets/images/cartaz.jpg';
-
-type Movie = {
-  id: string;
-  title: string;
-  overview: string;
-  poster_path: string;
-  release_date: string;
-  vote_average: number;
-};
+import { Movie } from '../../models/MovieModel';
+import { Link } from 'react-router-dom';
 
 export const MovieCard = ({
   id,
@@ -24,7 +16,7 @@ export const MovieCard = ({
   const IMAGE_PATH = 'https://image.tmdb.org/t/p/w500';
 
   return (
-    <div id={id} className={styles.card}>
+    <Link to={`details/${id}`} className={styles.card}>
       <div className={styles.flyer}>
         <img
           src={poster_path ? `${IMAGE_PATH}${poster_path}` : cartaz}
@@ -48,6 +40,6 @@ export const MovieCard = ({
           <Badge />
         </ul>
       </div>
-    </div>
+    </Link>
   );
 };

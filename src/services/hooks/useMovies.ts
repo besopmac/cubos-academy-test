@@ -1,14 +1,6 @@
-import { useQuery } from 'react-query';
+import { Movie } from '../../models/MovieModel';
 import { api } from '../api';
-
-type Movie = {
-  id: string;
-  title: string;
-  overview: string;
-  poster_path: string;
-  release_date: string;
-  vote_average: number;
-};
+import { useQuery } from 'react-query';
 
 export async function getMovies(): Promise<Movie[]> {
   const { data } = await api.get(`/discover/movie`, {
