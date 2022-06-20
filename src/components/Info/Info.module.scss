@@ -13,6 +13,10 @@
     rgba(44, 44, 44, 1) 10%,
     rgba(205, 205, 205, 1) 200%
   );
+
+  @media screen and (max-width: 1140px) {
+    padding: 30px;
+  }
 }
 
 .header {
@@ -61,6 +65,10 @@
     line-height: 1.5;
     font-weight: normal;
     padding: 20px 0 20px 20px;
+
+    @media screen and (max-width: 1140px) {
+      padding: 10px 0 20px;
+    }
   }
 }
 
@@ -93,7 +101,7 @@
   display: grid;
   margin-top: 20px;
   grid-template-rows: repeat(2, auto);
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 
   p {
     line-height: 1.2;
@@ -127,5 +135,9 @@
     + li {
       margin-left: 15px;
     }
+  }
+
+  @media screen and (max-width: 1140px) {
+    margin-top: 30px;
   }
 }
