@@ -2,6 +2,11 @@
   position: relative;
   margin-bottom: 80px;
 
+  @media screen and (max-width: 1140px) {
+    width: 100%;
+    border: 5px solid red;
+  }
+
   .searchIcon {
     top: 50%;
     left: 36px;
@@ -10,6 +15,12 @@
     fill: var(--gray);
     position: absolute;
     transform: translateY(-50%);
+
+    @media screen and (max-width: 1140px) {
+      left: 24px;
+      width: 24px;
+      height: 24px;
+    }
   }
 
   input[type=text] {
@@ -24,6 +35,10 @@
     border: 1px solid var(--white);
     box-shadow: 0 2px 25px -5px var(--shadow);
 
+    @media screen and (max-width: 1140px) {
+      padding-left: 62px;
+    }
+
     &:focus,
     &:focus-visible {
       outline: none;
@@ -35,12 +50,10 @@
       font-size: 1.5rem;
       color: var(--gray);
       letter-spacing: -0.01rem;
+
+      @media screen and (max-width: 1140px) {
+        font-size: 1.3rem;
+      }
     }
   }
 }
-
-// export const SearchInput = styled.div`  
-// `;
-
-// export const Input = styled.input`
-// `;
