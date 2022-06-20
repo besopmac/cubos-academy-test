@@ -1,4 +1,4 @@
-import cartaz from './../../assets/images/cartaz.jpg';
+import cartaz from './../../assets/images/cartaz.png';
 import styles from './../Flyer/Flyer.module.scss';
 
 export const Flyer = () => {

@@ -1,20 +1,8 @@
-import { useQuery } from 'react-query';
+import { Movie } from '../../models/MovieModel';
 import { api } from '../api';
-
-type Movie = {
-  id: string;
-  title: string;
-  overview: string;
-  popularity: number;
-  poster_path: string;
-};
-
-type GetMovies = {
-  data: Movie[];
-};
+import { useQuery } from 'react-query';
 
 export async function getMovies(): Promise<Movie[]> {
-  // const { data } = await api.get('movies');
   const { data } = await api.get(`/discover/movie`, {
     params: {
       api_key: import.meta.env.VITE_TMDB_API_KEY,
@@ -22,13 +10,14 @@ export async function getMovies(): Promise<Movie[]> {
     },
   });
 
-  const movies = data.results.map((movie: any) => {
+  const movies = data.results.map((movie: Movie) => {
     return {
       id: movie.id,
       title: movie.title,
       overview: movie.overview,
-      popularity: movie.popularity,
       poster_path: movie.poster_path,
+      release_date: movie.release_date,
+      vote_average: movie.vote_average,
     };
   });
 
@@ -37,6 +26,6 @@ export async function getMovies(): Promise<Movie[]> {
 
 export function useMovies() {
   return useQuery('movies', getMovies, {
-    staleTime: 1000 * 10, // 10 seconds
+    staleTime: 10000, // 10 seconds
   });
 }
