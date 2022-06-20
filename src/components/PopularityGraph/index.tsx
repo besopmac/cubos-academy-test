@@ -5,9 +5,5 @@ type PopularityProps = {
 };
 
 export const PopularityGraph = ({ voteAverage }: PopularityProps) => {
-  return (
-    <>
-      <small>{voteAverage}</small>
-    </>
-  );
+  return <div className={styles.popularityGraph}>{voteAverage}</div>;
 };

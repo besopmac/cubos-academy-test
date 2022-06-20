@@ -1,7 +1,7 @@
 import { Badge } from '../Badge';
 import { PopularityGraph } from '../PopularityGraph';
 import styles from './../MovieCard/MovieCard.module.scss';
-import cartaz from './../../assets/images/cartaz.jpg';
+import cartaz from './../../assets/images/cartaz.png';
 import { Movie } from '../../models/MovieModel';
 import { Link } from 'react-router-dom';
 
